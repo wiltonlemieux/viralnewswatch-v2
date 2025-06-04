@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - ViralNewsWatch</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <h1>Edit Viral Videos</h1>
+  <form id="videoForm"></form>
+  <button onclick="saveChanges()">Save All</button>
+
+  <script>
+    const form = document.getElementById("videoForm");
+
+    for (let i = 1; i <= 50; i++) {
+      form.innerHTML += `
+        <div class="video-edit">
+          <h3>Video #${i}</h3>
+          <input type="text" id="title${i}" placeholder="Video Title" />
+          <input type="text" id="link${i}" placeholder="YouTube Embed Link" />
+        </div>
+      `;
+    }
+
+    function saveChanges() {
+      let videos = [];
+      for (let i = 1; i <= 50; i++) {
+        const title = document.getElementById('title' + i).value;
+        const link = document.getElementById('link' + i).value;
+        videos.push({ title, link });
+      }
+      localStorage.setItem('videos', JSON.stringify(videos));
+      alert("Changes saved!");
+    }
+  </script>
+</body>
+</html>
