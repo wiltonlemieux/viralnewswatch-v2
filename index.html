@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ViralNewsWatch - Full Newspaper Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f8f1e4;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #1a1a1a;
+    }
+    header {
+      text-align: center;
+      background-color: #e0d9c6;
+      border-bottom: 3px solid #111;
+      padding: 30px 10px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #000;
+      text-transform: uppercase;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1600px;
+      margin: auto;
+    }
+    .box {
+      background: rgba(255, 255, 255, 0.88);
+      border: 2px solid #111;
+      padding: 15px;
+      box-shadow: 4px 4px 0 #aaa;
+      border-radius: 4px;
+    }
+    .box h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      border-bottom: 1px dashed #111;
+      padding-bottom: 5px;
+    }
+    iframe, img {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .horizontal {
+      aspect-ratio: 16 / 9;
+    }
+    .vertical {
+      aspect-ratio: 9 / 16;
+    }
+    .square {
+      aspect-ratio: 1 / 1;
+    }
+    .background-media {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      opacity: 0.08;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<audio id="bg-audio" autoplay loop>
+  <source src="background-audio.mp3" type="audio/mpeg">
+</audio>
+<button onclick="toggleAudio()" id="mute-btn" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">🔊</button>
+<script>
+  const audio = document.getElementById("bg-audio");
+  const btn = document.getElementById("mute-btn");
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = "🔊";
+    } else {
+      audio.pause();
+      btn.textContent = "🔇";
+    }
+  }
+</script>
+
+
+<video autoplay muted loop class="background-media">
+  <source src="background-video.mp4" type="video/mp4">
+</video>
+
+<header>
+  <h1>ViralNewsWatch</h1>
+</header>
+
+<div class="grid">
+
+  <div class="box">
+    <h2>Viral Clip #1</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #2</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #3</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #4</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #5</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #6</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #7</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #8</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #9</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #10</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #11</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #12</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #13</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #14</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #15</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #16</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #17</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #18</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #19</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #20</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #21</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #22</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #23</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #24</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #25</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #26</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #27</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #28</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #29</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #30</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #31</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #32</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #33</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #34</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #35</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #36</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #37</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #38</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #39</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #40</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #41</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #42</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #43</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #44</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #45</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #46</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #47</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #48</h2>
+    <iframe class="horizontal" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #49</h2>
+    <iframe class="vertical" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="box">
+    <h2>Viral Clip #50</h2>
+    <iframe class="square" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+</div>
+
+</body>
+</html>
